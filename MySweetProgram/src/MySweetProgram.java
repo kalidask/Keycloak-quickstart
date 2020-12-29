@@ -1,10 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MySweetProgram {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 
-		System.out.println("What's your name ?");
+		//System.out.println("What's your name ?");
 
 		
 		/* Scanner in = new Scanner(System.in);
@@ -29,12 +33,23 @@ public class MySweetProgram {
 		}
 		*/
 		
+		Scanner in = new Scanner(new File("students.txt"));
 		
-		for (int i =0; i < 10; i++) {
-			System.out.println("My i value is :"+i);
-
-		}
+		List<String> students = new ArrayList<String>();
 		
+				while(in.hasNextLine()) {
+					students.add(in.nextLine());
+					
+				}
+				
+				for (int i =0; i < students.size(); i++) {
+					
+					System.out.println("name is "+ students.get(i));
+				}
+				
+				
+		
+		in.close();
 		
 	
 	}
