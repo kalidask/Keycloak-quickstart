@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.keycloak</groupId>
+  <artifactId>servletfilter</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <description>Keycloak Example for Servlet Adapter </description>
+  
+  	<dependencies>
+  
+  <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-servlet-filter-adapter</artifactId>
+            <version>9.0.12.redhat-00001</version>
+        </dependency>
+  <dependency>
+  	<groupId>org.keycloak</groupId>
+  	<artifactId>keycloak-servlet-adapter-spi</artifactId>
+  	<version>9.0.12.redhat-00001</version>
+  </dependency>
+  <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>3.0.1</version>
+        <scope>provided</scope>
+</dependency>
+  	</dependencies>
+        	 <repositories>
+    <repository>
+      <id>redhat-repo2</id>
+      <name>redhat repo</name>
+      <url>https://maven.repository.redhat.com/ga/</url>
+    </repository>
+  </repositories>
+        
+</project>
