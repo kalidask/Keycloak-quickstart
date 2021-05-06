@@ -1,5 +1,5 @@
-<jsp:useBean id="controller" class="servletfilter.Controller" scope="request"/>
-<% controller.handleLogout(request, response); %>
+<jsp:useBean id="controller" class="servletfilter.Controller" scope="request"/> 
+<% controller.handleLogout(request, response); %> --%>
 
 <c:set var="isLoggedIn" value="<%=controller.isLoggedIn(request)%>"/>
 <c:if test="${isLoggedIn}">
